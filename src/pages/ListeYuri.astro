@@ -2,7 +2,6 @@
 import Content from '~/components/widgets/Content.astro';
 import Layout from '~/layouts/PageLayout.astro';
 import contentList from '~/data/post/content.json';
-import { Fragment } from 'astro/jsx-runtime';
 import CallToAction from '~/components/widgets/CallToAction.astro';
 import placeholder from '~/assets/ImgManga/placeholder.png';
 import cover5SE from '~/assets/ImgManga/5SE.png';
@@ -189,7 +188,7 @@ const metadata = {
     contentList.map((entry, index) => (
       <Content
         image={{
-          src: covers[entry.coverLink] || placeholder,
+          src: covers[entry.coverLink as keyof typeof covers] || placeholder,
           alt: entry.image?.alt || ""
         }}
         isReversed={index % 2 === 1}
