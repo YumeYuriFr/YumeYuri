@@ -1,0 +1,310 @@
+---
+import Features2 from '~/components/widgets/Features2.astro';
+import Features3 from '~/components/widgets/Features3.astro';
+import Hero from '~/components/widgets/Hero.astro';
+import Stats from '~/components/widgets/Stats.astro';
+import Steps2 from '~/components/widgets/Steps2.astro';
+import Layout from '~/layouts/PageLayout.astro';
+import Content from '~/components/widgets/Content.astro';
+import CallToAction from '~/components/widgets/CallToAction.astro';
+import mikuwuImg from '~/assets/images/mikuwu.jpg';
+import adachiImg from '~/assets/images/adachi.jpg';
+
+const metadata = {
+  title: 'About us',
+};
+---
+
+
+<Layout metadata={metadata}>
+
+  <Hero
+   image={{ src: '~/assets/images/team.jpg', alt: 'banner' }}
+  >
+    <Fragment slot="title">
+      Qui sont les <br />
+      <span class="text-accent dark:text-white"> Miko</span> gardienne   <br />de ce sanctuaire du Yuri
+    </Fragment>
+
+    <Fragment slot="subtitle">
+      Passionnées par le yuri, nous avons créé ce sanctuaire pour partager notre amour et nos découvertes. Faciliter la découverte de nouveaux titres et de nouvelles histoires en français, ainsi que la promotion des œuvres de yuri. Créer un espace où les fans peuvent se rassembler, discuter et partager leur passion pour le yuri.
+    </Fragment>
+  </Hero>
+   <Content
+    isReversed
+    title="Mikuwu"
+    items={[ 
+      {
+        title: '🌸ohayo 🌸',
+        description:
+        "Juste une meuf random qui joue à des jeux de rythme weeb et regarde des animes, fan de neko et yuri. Et une grosse simp de Bocchi The Rock. J'adore jouer à des jeux de rythme (genre vraiment beaucoup), genshin impact et minecraft. J'aime aussi énormément la musique(Metal, j-core, speedcore future funk). Ah et mon chat aussi il est beau.",
+        
+      },
+      {
+        title: "Comment j'ai connu le yuri",
+        description:
+           "J'ai commencé les Yuris par citrus lorsqu'il est sortie en anime (donc en 2018), je suis tombée sous le charme du yuri de ce qu'il propose, représente. La manière de raconté la rommence entre filles, Les sentiments, les émotions etc.. Depuis je suis toujours à la recherche de nouveaux Yuris à découvrir, que ce soit en manga, anime ou jeux vidéo !",
+      },
+      {
+        title: 'Mon rôle dans Yume Yuri',
+        description:
+          "Nerd que je suis je m'occupe du développement du site et de tout ce qui touche à l'aspect technique du site. Qui fonctionne évidement Grace au Yuri !  ",
+      },
+    ]}
+    image={{
+      src: mikuwuImg,
+      alt: 'Colorful Image',
+    }}
+  >
+
+    <Fragment slot="bg">
+      <div class="absolute inset-0 bg-[#1C1117] dark:bg-transparent"></div>
+    </Fragment>
+  </Content>
+
+  <!-- Content Widget **************** -->
+
+  <Content
+    isAfterContent
+    title='Sakura Adachi'
+    items={[ 
+      {
+        title: 'Bonjour',
+        description: "Je suis sakura adachi, j'aime bien le power metal, les animes/mangas (weeb) plus précisément le genre yuri et comme mon pseudo l'indique: j'adore «Adachi to Shimamura» !!! Je joue au jeux vidéos depuis ma plus tendre enfance (très jeune), je joue régulièrement à différent type de jeu mais cela dépend beaucoup de la période. (Parmi mes favoris: Minecraft, osu!, Counter Strike, Code Vein)",
+      },
+      {
+        title: 'Comment ai-je connu le Yuri ? ',
+        description:
+          "Mon anecdote est nulle mais j'ai demandé à chatGPT de me donner un anime yuri a regarder et il m'a proposé «Citrus» et même si c'est chelou bah j'ai kiffer du coup j'ai enchainer avec d'autres comme: «Bloom Into You» ou «Netsuzou TRap NTR». Puis j'ai commencé à lire les mangas et un jour j'ai découvert le saint graal: «Adachi to Shimamura» (svp une saison 2) Effectivement j'ai découvert le genre assez récemment !",
+      },
+      {
+        title: 'Mon rôle dans Yume Yuri',
+        description:
+          "Contrairement à ma super collègue je n'ai pas de talent en développement web, en conséquence, c'est moi qui m'occupe de la recherches et du rassemblements des informations utilisées dans ce projet.",
+      },
+    ]}
+    image={{
+      src: adachiImg,
+      alt: 'Blueprint Image',
+    }}
+  >
+
+    <Fragment slot="bg">
+      <div class="absolute inset-0 bg-[#1C1117] dark:bg-transparent"></div>
+    </Fragment>
+  </Content>
+   <CallToAction
+    actions={[
+      {
+        variant: 'primary',
+        text: 'Discord',
+        href: 'https://discord.gg/YyG3CmHTWh',
+        target: '_blank',
+        icon: 'tabler:brand-discord',
+      },
+    ]}
+  >
+    <Fragment slot="title">
+     Des questions sur nous ? 
+    </Fragment>
+
+    <Fragment slot="subtitle">
+      Notre discord est là pour répondre à toutes vos questions, n'hésitez pas à nous rejoindre pour en discuter.
+    </Fragment>
+  </CallToAction>
+
+  <!-- Content Widget **************** -->
+
+  <!-- Stats Widget ****************** -
+
+  <Stats
+    title="Statistics about us"
+    stats={[
+      { title: 'Offices', amount: '4' },
+      { title: 'Employees', amount: '248' },
+      { title: 'Templates', amount: '12' },
+      { title: 'Awards', amount: '24' },
+    ]}
+  />
+
+  <!-- Features3 Widget ************** 
+
+  <Features3
+    title="Our templates"
+    subtitle="Etiam scelerisque, enim eget vestibulum luctus, nibh mauris blandit nulla, nec vestibulum risus justo ut enim. Praesent lacinia diam et ante imperdiet euismod."
+    columns={3}
+    isBeforeContent={true}
+    items={[
+      {
+        title: 'Educational',
+        description:
+          'Morbi faucibus luctus quam, sit amet aliquet felis tempor id. Cras augue massa, ornare quis dignissim a, molestie vel nulla.',
+        icon: 'tabler:template',
+      },
+      {
+        title: 'Interior Design',
+        description:
+          'Vivamus porttitor, tortor convallis aliquam pretium, turpis enim consectetur elit, vitae egestas purus erat ac nunc nulla.',
+        icon: 'tabler:template',
+      },
+      {
+        title: 'Photography',
+        description:
+          'Duis sed lectus in nisl vehicula porttitor eget quis odio. Aliquam erat volutpat. Nulla eleifend nulla id sem fermentum.',
+        icon: 'tabler:template',
+      },
+    ]}
+  />
+
+  <!-- Features3 Widget ************** 
+
+  <Features3
+    columns={3}
+    isAfterContent={true}
+    items={[
+      {
+        title: 'E-commerce',
+        description:
+          'Rutrum non odio at vehicula. Proin ipsum justo, dignissim in vehicula sit amet, dignissim id quam. Sed ac tincidunt sapien.',
+        icon: 'tabler:template',
+      },
+      {
+        title: 'Blog',
+        description:
+          'Nullam efficitur volutpat sem sed fringilla. Suspendisse et enim eu orci volutpat laoreet ac vitae libero.',
+        icon: 'tabler:template',
+      },
+      {
+        title: 'Business',
+        description:
+          'Morbi et elit finibus, facilisis justo ut, pharetra ipsum. Donec efficitur, ipsum quis congue luctus, mauris magna.',
+        icon: 'tabler:template',
+      },
+      {
+        title: 'Branding',
+        description:
+          'Suspendisse vitae nisi eget tortor luctus maximus sed non lectus. Cras malesuada pretium placerat. Nullam venenatis dolor a ante rhoncus.',
+        icon: 'tabler:template',
+      },
+      {
+        title: 'Medical',
+        description:
+          'Vestibulum malesuada lacus id nibh posuere feugiat. Nam volutpat nulla a felis ultrices, id suscipit mauris congue. In hac habitasse platea dictumst.',
+        icon: 'tabler:template',
+      },
+      {
+        title: 'Fashion Design',
+        description:
+          'Maecenas eu tellus eget est scelerisque lacinia et a diam. Aliquam velit lorem, vehicula id fermentum et, rhoncus et purus.',
+        icon: 'tabler:template',
+      },
+    ]}
+    image={{
+      src: 'https://images.unsplash.com/photo-1504384308090-c894fdcc538d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1740&q=80',
+      alt: 'Colorful Image',
+    }}
+  />
+
+  <!-- Steps2 Widget ****************** 
+
+  <Steps2
+    title="Our values"
+    subtitle="Maecenas eu tellus eget est scelerisque lacinia et a diam. Aliquam velit lorem, vehicula id fermentum et, rhoncus et purus. Nulla facilisi. Vestibulum malesuada lacus."
+    items={[
+      {
+        title: 'Customer-centric approach',
+        description:
+          'Donec id nibh neque. Quisque et fermentum tortor. Fusce vitae dolor a mauris dignissim commodo. Ut eleifend luctus condimentum.',
+      },
+      {
+        title: 'Constant Improvement',
+        description:
+          'Phasellus laoreet fermentum venenatis. Vivamus dapibus pulvinar arcu eget mattis. Fusce eget mauris leo.',
+      },
+      {
+        title: 'Ethical Practices',
+        description:
+          'Vestibulum imperdiet libero et lectus molestie, et maximus augue porta. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.',
+      },
+    ]}
+  />
+
+  <!-- Steps2 Widget ****************** 
+
+  <Steps2
+    title="Achievements"
+    subtitle="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi sagittis, quam nec venenatis lobortis, mi risus tempus nulla, sed porttitor est nibh at nulla."
+    isReversed={true}
+    callToAction={{
+      text: 'See more',
+      href: '/',
+    }}
+    items={[
+      {
+        title: 'Global reach',
+        description: 'Nam malesuada urna in enim imperdiet tincidunt. Phasellus non tincidunt nisi, at elementum mi.',
+        icon: 'tabler:globe',
+      },
+      {
+        title: 'Positive customer feedback and reviews',
+        description:
+          'Cras semper nulla leo, eget laoreet erat cursus sed. Praesent faucibus massa in purus iaculis dictum.',
+        icon: 'tabler:message-star',
+      },
+      {
+        title: 'Awards and recognition as industry experts',
+        description:
+          'Phasellus lacinia cursus velit, eu malesuada magna pretium eu. Etiam aliquet tellus purus, blandit lobortis ex rhoncus vitae.',
+        icon: 'tabler:award',
+      },
+    ]}
+  />
+
+  <!-- Features2 Widget ************** 
+
+  <Features2
+    title="Our locations"
+    tagline="Find us"
+    columns={4}
+    items={[
+      {
+        title: 'EE.UU',
+        description: '1234 Lorem Ipsum St, 12345, Miami',
+      },
+      {
+        title: 'Spain',
+        description: '5678 Lorem Ipsum St, 56789, Madrid',
+      },
+      {
+        title: 'Australia',
+        description: '9012 Lorem Ipsum St, 90123, Sydney',
+      },
+      {
+        title: 'Brazil',
+        description: '3456 Lorem Ipsum St, 34567, São Paulo',
+      },
+    ]}
+  />
+
+  <!-- Features2 Widget **************
+
+  <Features2
+    title="Technical Support"
+    tagline="Contact us"
+    columns={2}
+    items={[
+      {
+        title: 'Chat with us',
+        description:
+          'Integer luctus laoreet libero, auctor varius purus rutrum sit amet. Ut nec molestie nisi, quis eleifend mi.',
+        icon: 'tabler:messages',
+      },
+      {
+        title: 'Call us',
+        description:
+          'Mauris faucibus finibus orci, in posuere elit viverra non. In hac habitasse platea dictumst. Cras lobortis metus a hendrerit congue.',
+        icon: 'tabler:headset',
+      },
+    ]}
+  /> -->
+</Layout>

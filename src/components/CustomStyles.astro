@@ -25,16 +25,20 @@ import '@fontsource-variable/inter';
     --aw-font-serif: 'Inter Variable';
     --aw-font-heading: 'Inter Variable';
 
-    --aw-color-primary: rgb(1 97 239);
-    --aw-color-secondary: rgb(1 84 207);
-    --aw-color-accent: rgb(109 40 217);
+  /* Thème principal: remplacer les bleus par du rose (cohérent avec les boutons) */
+  --aw-color-primary: rgb(236 72 153); /* pink-500 */
+  --aw-color-secondary: rgb(219 39 119); /* pink-600 */
+  --aw-color-accent: rgb(168 85 247); /* violet-500, conserve un accent */
 
-    --aw-color-text-heading: rgb(0 0 0);
-    --aw-color-text-default: rgb(16 16 16);
-    --aw-color-text-muted: rgb(16 16 16 / 66%);
-    --aw-color-bg-page: rgb(255 255 255);
+  /* Forcer texte clair par défaut (blanc cassé) */
+  --aw-color-text-heading: rgb(247, 248, 248);
+  --aw-color-text-default: rgb(229 236 246);
+  --aw-color-text-muted: rgb(229 236 246 / 66%);
+  /* Compatibilité avec utilitaires qui utilisent --aw-color-text-page */
+  --aw-color-text-page: var(--aw-color-text-default);
+  --aw-color-bg-page: #1C1117;
 
-    --aw-color-bg-page-dark: rgb(3 6 32);
+  --aw-color-bg-page-dark: #1C1117;
 
     ::selection {
       background-color: lavender;
@@ -46,14 +50,16 @@ import '@fontsource-variable/inter';
     --aw-font-serif: 'Inter Variable';
     --aw-font-heading: 'Inter Variable';
 
-    --aw-color-primary: rgb(1 97 239);
-    --aw-color-secondary: rgb(1 84 207);
-    --aw-color-accent: rgb(109 40 217);
+  /* Dark mode: mêmes valeurs pour cohérence (ou ajuster si besoin) */
+  --aw-color-primary: rgb(236 72 153); /* pink-500 */
+  --aw-color-secondary: rgb(219 39 119); /* pink-600 */
+  --aw-color-accent: rgb(168 85 247); /* violet-500 */
 
-    --aw-color-text-heading: rgb(247, 248, 248);
-    --aw-color-text-default: rgb(229 236 246);
-    --aw-color-text-muted: rgb(229 236 246 / 66%);
-    --aw-color-bg-page: rgb(3 6 32);
+  --aw-color-text-heading: rgb(247, 248, 248);
+  --aw-color-text-default: rgb(229 236 246);
+  --aw-color-text-muted: rgb(229 236 246 / 66%);
+  --aw-color-text-page: var(--aw-color-text-default);
+  --aw-color-bg-page: #1C1117;
 
     ::selection {
       background-color: black;

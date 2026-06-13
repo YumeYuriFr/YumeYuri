@@ -12,8 +12,9 @@ import FAQs from '~/components/widgets/FAQs.astro';
 import Stats from '~/components/widgets/Stats.astro';
 import CallToAction from '~/components/widgets/CallToAction.astro';
 
+
 const metadata = {
-  title: 'AstroWind — Free template for creating websites with Astro + Tailwind CSS',
+  title: 'Bienvenus dans votre sanctuaire du yuri',
   ignoreTitleTemplate: true,
 };
 ---
@@ -22,40 +23,29 @@ const metadata = {
   <!-- Hero Widget ******************* -->
 
   <Hero
-    actions={[
-      {
-        variant: 'primary',
-        text: 'Get template',
-        href: 'https://github.com/onwidget/astrowind',
-        target: '_blank',
-        icon: 'tabler:download',
-      },
-      { text: 'Learn more', href: '#features' },
+
     ]}
-    image={{ src: '~/assets/images/hero-image.png', alt: 'AstroWind Hero Image' }}
+    image={{ src: '~/assets/images/test.png', alt: 'banner' }}
   >
     <Fragment slot="title">
-      Free template for <span class="hidden xl:inline">creating websites with</span>
-      <span class="text-accent dark:text-white"> Astro 5.0</span> + Tailwind CSS
+      Bienvenus dans votre sanctuaire du yuri
     </Fragment>
 
     <Fragment slot="subtitle">
       <span class="hidden sm:inline">
-        <span class="font-semibold">AstroWind</span> is a free, customizable and production-ready template for Astro 5.0
-        + Tailwind CSS.</span
+        <span class="font-semibold">Yumi Yuri</span> votre sanctuaire du Yuri</span
       >
-      <span class="block mb-1 sm:hidden font-bold text-blue-600">AstroWind: Production-ready.</span>
-      Suitable for Startups, Small Business, SaaS websites, Professional Portfolios, Marketing websites, Landing Pages &
-      Blogs.
+      <span class="block mb-1 sm:hidden font-bold text-blue-600"> </span>
+      Un monde magique et de rêve est à présent ici. Rien ne presse tout est là.
     </Fragment>
   </Hero>
 
   <!-- Note Widget ******************* -->
 
-  <Note title="Philosophy:" description="Simplicity, Best Practices and High Performance" />
+   <!-- <Note title="Philosophy:" description="Simplicity, Best Practices and High Performance" /> --> 
 
   <!-- Features Widget *************** -->
-
+<!--
   <Features
     id="features"
     tagline="Features"
@@ -63,9 +53,9 @@ const metadata = {
     subtitle="One of the most professional and comprehensive templates currently on the market. Most starred & forked Astro theme in 2022, 2023 and 2024."
     items={[
       {
-        title: 'Astro + Tailwind CSS Integration',
+        title: 'Todo',
         description:
-          'A seamless integration between two great frameworks that offer high productivity, performance and versatility.',
+          'blalblalablalbal',
         icon: 'tabler:brand-tailwind',
       },
       {
@@ -101,45 +91,7 @@ const metadata = {
     ]}
   />
 
-  <!-- Content Widget **************** -->
-
-  <Content
-    isReversed
-    tagline="Inside template"
-    title="AstroWind's Blueprint: Fun Meets Functionality!"
-    items={[
-      {
-        title: 'Built on top of Astro 5.0',
-        description:
-          'Benefiting from the performance and developer-friendly features of this modern static site generator.',
-      },
-      {
-        title: 'Styled using Tailwind CSS',
-        description:
-          'Facilitating rapid design and consistent styling with this highly popular utility-first CSS framework.',
-      },
-      {
-        title: 'Cross-browser compatibility',
-        description:
-          'Ensure your website looks and functions consistently across various web browsers, delivering a seamless experience to all users.',
-      },
-    ]}
-    image={{
-      src: 'https://images.unsplash.com/photo-1519389950473-47ba0277781c?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80',
-      alt: 'Colorful Image',
-    }}
-  >
-    <Fragment slot="content">
-      <h3 class="text-2xl font-bold tracking-tight dark:text-white sm:text-3xl mb-2">Building on modern foundations</h3>
-      Gain a competitive advantage by incorporating industry leading practices
-    </Fragment>
-
-    <Fragment slot="bg">
-      <div class="absolute inset-0 bg-blue-50 dark:bg-transparent"></div>
-    </Fragment>
-  </Content>
-
-  <!-- Content Widget **************** -->
+ <!-
 
   <Content
     isAfterContent
@@ -171,51 +123,13 @@ const metadata = {
   >
     <Fragment slot="content">Ensure your online presence truly represents you.</Fragment>
 
-    <Fragment slot="bg">
-      <div class="absolute inset-0 bg-blue-50 dark:bg-transparent"></div>
-    </Fragment>
+      <Fragment slot="bg">
+        <div class="absolute inset-0 bg-[#1C1117] dark:bg-transparent"></div>
+      </Fragment>
   </Content>
 
-  <!-- Content Widget **************** -->
 
-  <Content
-    isReversed
-    isAfterContent
-    items={[
-      {
-        title: 'Enhanced user engagement',
-        description:
-          'Captivate your audience with interactive elements, intuitive navigation, and visually appealing layouts, encouraging longer visits.',
-      },
-      {
-        title: 'Continuous improvement',
-        description:
-          'Ensure your website stays aligned with the latest trends and technologies through regular updates and enhancements.',
-      },
-      {
-        title: 'Time and resource efficiency',
-        description:
-          'Skip the time-consuming process of building a website from scratch and launch your online presence sooner with AstroWind.',
-      },
-      {
-        title: 'Community support',
-        description: `Join the growing AstroWind community for insights, resources, and assistance, ensuring you're never alone on your web development journey.`,
-      },
-    ]}
-    image={{
-      src: 'https://images.unsplash.com/photo-1611462985358-60d3498e0364?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80',
-      alt: 'Astronauts Image',
-    }}
-  >
-    <Fragment slot="content">Designed to foster growth and success.</Fragment>
-
-    <Fragment slot="bg">
-      <div class="absolute inset-0 bg-blue-50 dark:bg-transparent"></div>
-    </Fragment>
-  </Content>
-
-  <!-- Steps Widget ****************** -->
-
+  <!-- Steps Widget ****************** 
   <Steps
     title="Get your dream website up and running in no time with AstroWind."
     items={[
@@ -247,9 +161,10 @@ const metadata = {
       alt: 'Steps image',
     }}
   />
+-->
 
   <!-- Features2 Widget ************** -->
-
+<!-- 
   <Features2
     title="Most used widgets"
     subtitle="Provides frequently used components for building websites using Tailwind CSS"
@@ -311,9 +226,9 @@ const metadata = {
       <div class="absolute inset-0 bg-blue-50 dark:bg-transparent"></div>
     </Fragment>
   </Features2>
-
+-->
   <!-- HighlightedPosts Widget ******* -->
-
+<!--
   <BlogLatestPosts
     title="Find out more content in our Blog"
     information={`The blog is used to display AstroWind documentation.
@@ -322,44 +237,41 @@ const metadata = {
                 `}
   />
 
-  <!-- FAQs Widget ******************* -->
+  <!- FAQs Widget ******************* -->
+    <Features2
+      title="A propos de nous"
+      subtitle="Passionnées par le yuri, nous avons créé ce sanctuaire pour partager notre amour et nos découvertes. Faciliter la découverte de nouveaux titres et de nouvelles histoires en français, ainsi que la promotion des œuvres de yuri. Créer un espace où les fans peuvent se rassembler, discuter et partager leur passion pour le yuri."
+    >
+      <Fragment slot="bg">
+        <div class="absolute inset-0 bg-page dark:bg-transparent"></div>
+      </Fragment>
+    </Features2>
 
   <FAQs
-    title="Frequently Asked Questions"
-    subtitle="Dive into the following questions to gain insights into the powerful features that AstroWind offers and how it can elevate your web development journey."
-    tagline="FAQs"
+    title="Questions pour ce sanctuaire ?"
+    subtitle="Vous trouverez ici les réponses à vos questions les plus fréquentes."
     classes={{ container: 'max-w-6xl' }}
     items={[
       {
-        title: 'Why AstroWind?',
+        title: "Qu'est ce que le genre Yuri ?",
         description:
-          "Michael Knight a young loner on a crusade to champion the cause of the innocent. The helpless. The powerless in a world of criminals who operate above the law. Here he comes Here comes Speed Racer. He's a demon on wheels.",
+          "Le genre Yuri, également connu sous le nom de 'shoujo-ai', est un genre de fiction qui met en avant des relations romantiques et émotionnelles entre des personnages féminins. Il explore les thèmes de l'amour, de l'amitié et de la découverte de soi à travers les yeux de femmes.",
       },
       {
-        title: 'What do I need to start?',
+        title: 'Comment découvrir le Yuri ?',
         description:
-          'Space, the final frontier. These are the voyages of the Starship Enterprise. Its five-year mission: to explore strange new worlds. Many say exploration is part of our destiny, but it’s actually our duty to future generations.',
+          "Pour découvrir le genre Yuri, vous pouvez commencer par regarder des animes et lire des mangas qui mettent en avant des relations entre femmes. Il existe de nombreux titres populaires dans ce genre, tels que 'Bloom Into You', 'Citrus' ou 'Adachi to Shimamura'. Vous pouvez également explorer notre répertoire pour obtenir des recommandations.",
       },
       {
-        title: 'How to install the Astro + Tailwind CSS template?',
+        title: "Qu'elles sont les sous catégories du Yuri ?",
         description:
-          "Well, the way they make shows is, they make one show. That show's called a pilot. Then they show that show to the people who make shows, and on the strength of that one show they decide if they're going to make more shows.",
+          "Les sous-catégories du yuri regroupent différents types de relations entre filles selon le ton, le contexte ou le contenu : Shōjo-ai : romance douce(ex : Bloom Into You), Class S : amitiés amoureuses éphémères entre écolières (ex : Maria-sama ga Miteru), Moe/Slice of Life : relations mignonnes et légères (ex : Yuru Yuri), Dark Yuri : histoires sombres et obsessionnelles (ex : Happy Sugar Life), Subtext/Fanservice : sous-entendus sans romance canon (ex : Love Live!), Adult Yuri : femmes adultes dans un cadre réaliste (ex : Octave), Fantasy/SF Yuri : romance entre filles dans un univers fantastique ou futuriste (ex : Flip Flappers)"  ,
       },
       {
-        title: "What's something that you don't understand?",
+        title: "Qui sont les principaux éditeurs de Yuri en France ?",
         description:
-          "A flower in my garden, a mystery in my panties. Heart attack never stopped old Big Bear. I didn't even know we were calling him Big Bear.",
-      },
-      {
-        title: 'What is something that you would like to try again?',
-        description:
-          "A business big enough that it could be listed on the NASDAQ goes belly up. Disappears! It ceases to exist without me. No, you clearly don't know who you're talking to, so let me clue you in.",
-      },
-      {
-        title: 'If you could only ask one question to each person you meet, what would that question be?',
-        description:
-          "This is not about revenge. This is about justice. A lot of things can change in twelve years, Admiral. Well, that's certainly good to know. About four years. I got tired of hearing how young I looked.",
-      },
+          "Les principaux éditeurs de yuri en France sont Taifu Comics, pionnier avec des titres comme Citrus et Octave, spécialisé dans le yuri; Noeve Grafx, connu pour ses éditions premium et des séries comme Yuri is My Job! et Whisper Me a Love Song ; Meian, qui propose du yuri mêlé à la fantasy ou l’isekai, avec des titres comme I’m in Love with the Villainess ; Kana, éditeur généraliste qui a publié Bloom Into You, un yuri introspectif très apprécié",
+      }
     ]}
   />
 
@@ -367,10 +279,10 @@ const metadata = {
 
   <Stats
     stats={[
-      { title: 'Downloads', amount: '132K' },
-      { title: 'Stars', amount: '24.8K' },
-      { title: 'Forks', amount: '10.3K' },
-      { title: 'Users', amount: '48.4K' },
+      { title: 'Nombre de Titre Yuri', amount: '132' },
+      { title: 'Nombre de tome en france', amount: '948' },
+      { title: 'Membre sur le discord', amount: '10' },
+      { title: 'Temps que adachi mette à répondre', amount: '48.4K' },
     ]}
   />
 
@@ -380,20 +292,20 @@ const metadata = {
     actions={[
       {
         variant: 'primary',
-        text: 'Get template',
-        href: 'https://github.com/onwidget/astrowind',
+        text: 'Discord',
+        href: 'https://discord.gg/YyG3CmHTWh',
         target: '_blank',
-        icon: 'tabler:download',
+        icon: 'tabler:brand-discord',
       },
     ]}
   >
     <Fragment slot="title">
-      Astro&nbsp;+&nbsp;<br class="block sm:hidden" /><span class="sm:whitespace-nowrap">Tailwind CSS</span>
+     Envie de discuté yuri ? 
     </Fragment>
 
     <Fragment slot="subtitle">
-      Be very surprised by these huge fake numbers you are seeing on this page. <br class="hidden md:inline" />Don't
-      waste more time! :P
+      Pour en découvrir plus sur l'univers du yuri, n'hésitez pas à nous rejoindre sur notre serveur Discord.
     </Fragment>
   </CallToAction>
 </Layout>
+
