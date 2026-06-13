@@ -15,11 +15,7 @@ export const headerData = {
 };
 
 export const footerData = {
- // links: [
- //   {
- //     // if i need to put some link on the footer is here lol 
- //   },
- // ],
+  links: [],
   secondaryLinks: [
     { text: 'Made Using onWidget · All rights reserved. ', href: 'https://github.com/onwidget/astrowind' },
    // { text: 'Privacy Policy', href: getPermalink('/privacy') },
