@@ -91,105 +91,105 @@ import coverYOU from '~/assets/ImgManga/YOU.png';
 import coverYUR from '~/assets/ImgManga/YUR.png';
 
 const covers = {
-  "5SE": cover5SE,
-  "ADA": coverADA,
-  "AFT": coverAFT,
-  "ALA": coverALA,
-  "ALL": coverALL,
-  "ALT": coverALT,
-  "ANE": coverANE,
-  "ASU": coverASU,
-  "ATR": coverATR,
-  "AUJ": coverAUJ,
-  "AUT": coverAUT,
-  "BLO": coverBLO,
-  "BLU": coverBLU,
-  "BOC": coverBOC,
-  "CAN": coverCAN,
-  "CCO": coverCCO,
-  "Cco": coverCCO,
-  "CIP": coverCIP,
-  "CIT": coverCIT,
-  "COU": coverCOU,
-  "DON": coverDON,
-  "EBI": coverEBI,
-  "ELE": coverELE,
-  "ELS": coverELS,
-  "ENS": coverENS,
-  "ENT": coverENT,
-  "ERI": coverERI,
-  "EST": coverEST,
-  "GIR": coverGIR,
-  "GOO": coverGOO,
-  "HAJ": coverHAJ,
-  "HAN": coverHAN,
-  "ICA": coverICA,
-  "ICI": coverICI,
-  "IDO": coverIDO,
-  "IMI": coverIMI,
-  "INT": coverINT,
-  "INU": coverINU,
-  "JEV": coverJEV,
-  "JOU": coverJOU,
-  "KAS": coverKAS,
-  "KAY": coverKAY,
-  "LAB": coverLAB,
-  "LAF": coverLAF,
-  "LAM": coverLAM,
-  "LEP": coverLEP,
-  "LES": coverLES,
-  "LIN": coverLIN,
-  "LOO": coverLOO,
-  "LOS": coverLOS,
-  "LUM": coverLUM,
-  "LYC": coverLYC,
-  "MAG": coverMAG,
-  "MAR": coverMAR,
-  "MIS": coverMIS,
-  "MIZ": coverMIZ,
-  "NOS": coverNOS,
-  "NOT": coverNOT,
-  "NTR": coverNTR,
-  "OCT": coverOCT,
-  "ORA": coverORA,
-  "PAS": coverPAS,
-  "PIN": coverPIN,
-  "PLO": coverPLO,
-  "QUE": coverQUE,
-  "ROL": coverROL,
-  "SAS": coverSAS,
-  "SEC": coverSEC,
-  "SHE": coverSHE,
-  "SHO": coverSHO,
-  "SIN": coverSIN,
-  "SIR": coverSIR,
-  "STI": coverSTI,
-  "SWD": coverSWD,
-  "SWE": coverSWE,
-  "TAD": coverTAD,
-  "THE": coverTHE,
-  "THI": coverTHI,
-  "TOD": coverTOD,
-  "UNE": coverUNE,
-  "UNT": coverUNT,
-  "UNV": coverUNV,
-  "VAM": coverVAM,
-  "WHI": coverWHI,
-  "YOU": coverYOU,
-  "YUR": coverYUR,
+  '5SE': cover5SE,
+  ADA: coverADA,
+  AFT: coverAFT,
+  ALA: coverALA,
+  ALL: coverALL,
+  ALT: coverALT,
+  ANE: coverANE,
+  ASU: coverASU,
+  ATR: coverATR,
+  AUJ: coverAUJ,
+  AUT: coverAUT,
+  BLO: coverBLO,
+  BLU: coverBLU,
+  BOC: coverBOC,
+  CAN: coverCAN,
+  CCO: coverCCO,
+  Cco: coverCCO,
+  CIP: coverCIP,
+  CIT: coverCIT,
+  COU: coverCOU,
+  DON: coverDON,
+  EBI: coverEBI,
+  ELE: coverELE,
+  ELS: coverELS,
+  ENS: coverENS,
+  ENT: coverENT,
+  ERI: coverERI,
+  EST: coverEST,
+  GIR: coverGIR,
+  GOO: coverGOO,
+  HAJ: coverHAJ,
+  HAN: coverHAN,
+  ICA: coverICA,
+  ICI: coverICI,
+  IDO: coverIDO,
+  IMI: coverIMI,
+  INT: coverINT,
+  INU: coverINU,
+  JEV: coverJEV,
+  JOU: coverJOU,
+  KAS: coverKAS,
+  KAY: coverKAY,
+  LAB: coverLAB,
+  LAF: coverLAF,
+  LAM: coverLAM,
+  LEP: coverLEP,
+  LES: coverLES,
+  LIN: coverLIN,
+  LOO: coverLOO,
+  LOS: coverLOS,
+  LUM: coverLUM,
+  LYC: coverLYC,
+  MAG: coverMAG,
+  MAR: coverMAR,
+  MIS: coverMIS,
+  MIZ: coverMIZ,
+  NOS: coverNOS,
+  NOT: coverNOT,
+  NTR: coverNTR,
+  OCT: coverOCT,
+  ORA: coverORA,
+  PAS: coverPAS,
+  PIN: coverPIN,
+  PLO: coverPLO,
+  QUE: coverQUE,
+  ROL: coverROL,
+  SAS: coverSAS,
+  SEC: coverSEC,
+  SHE: coverSHE,
+  SHO: coverSHO,
+  SIN: coverSIN,
+  SIR: coverSIR,
+  STI: coverSTI,
+  SWD: coverSWD,
+  SWE: coverSWE,
+  TAD: coverTAD,
+  THE: coverTHE,
+  THI: coverTHI,
+  TOD: coverTOD,
+  UNE: coverUNE,
+  UNT: coverUNT,
+  UNV: coverUNV,
+  VAM: coverVAM,
+  WHI: coverWHI,
+  YOU: coverYOU,
+  YUR: coverYUR,
 };
 const metadata = {
   title: 'List Yuri',
 };
 ---
+
 <Layout metadata={metadata}>
-  
   {
     contentList.map((entry, index) => (
       <Content
         image={{
           src: covers[entry.coverLink as keyof typeof covers] || placeholder,
-          alt: entry.image?.alt || ""
+          alt: entry.image?.alt || '',
         }}
         isReversed={index % 2 === 1}
         isAfterContent={index % 3 === 0}
@@ -199,7 +199,9 @@ const metadata = {
             {entry.title} - {entry.author}
           </h3>
           <p>Status : {entry.status}</p>
-          <p>Tomes dispo FR : {entry.volumesFR} | JP : {entry.volumesJP}</p>
+          <p>
+            Tomes dispo FR : {entry.volumesFR} | JP : {entry.volumesJP}
+          </p>
           <p>Éditeur : {entry.publisher}</p>
           <p class="mt-2">{entry.synopsis}</p>
           <div class="mt-3 space-x-3">
@@ -213,7 +215,7 @@ const metadata = {
       </Content>
     ))
   }
-   <CallToAction
+  <CallToAction
     actions={[
       {
         variant: 'primary',
@@ -224,13 +226,8 @@ const metadata = {
       },
     ]}
   >
-    <div slot="title">
-      Un titre manquant ?
-    </div>
+    <div slot="title">Un titre manquant ?</div>
 
-    <div slot="subtitle">
-      Merci de nous le signaler sur notre discord !
-    </div>
+    <div slot="subtitle">Merci de nous le signaler sur notre discord !</div>
   </CallToAction>
-  
 </Layout>

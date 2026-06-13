@@ -48,7 +48,7 @@
 .dark #header.scroll > div:first-child,
 #header.scroll.dark > div:first-child {
   background: rgba(18, 11, 15, 0.95); /* #120B0F with 95% opacity */
-  border-bottom: 1px solid rgba(255,255,255,0.08);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
   box-shadow: none;
 }
 /* #header.scroll > div:last-child {
@@ -110,7 +110,7 @@
 
 /* Specific override for header dropdown which uses md:bg_white/90 */
 .dark .md\:bg_white\/90 {
-  background-color: rgba(28,17,23,0.9) !important;
+  background-color: rgba(28, 17, 23, 0.9) !important;
 }
 
 /* Force any absolute full-bleed background layers to use the site page color so stacked layers don't produce
@@ -119,5 +119,5 @@
 .absolute.inset-0.bg-page,
 .absolute.inset-0.bg-white,
 .absolute.inset-0.bg-white\/90 {
-  background-color: #1C1117 !important;
+  background-color: #1c1117 !important;
 }

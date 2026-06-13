@@ -1,15 +1,13 @@
 export const headerData = {
   links: [
-    
-      {
+    {
       text: 'Liste des Yuris',
       href: 'ListeYuri',
     },
-       {
+    {
       text: 'Présentation',
       href: 'Presentation',
     },
-  
   ],
   actions: [{ text: 'Discord', href: 'https://discord.gg/YyG3CmHTWh', target: '_blank' }],
 };
@@ -18,7 +16,7 @@ export const footerData = {
   links: [],
   secondaryLinks: [
     { text: 'Made Using onWidget · All rights reserved. ', href: 'https://github.com/onwidget/astrowind' },
-   // { text: 'Privacy Policy', href: getPermalink('/privacy') },
+    // { text: 'Privacy Policy', href: getPermalink('/privacy') },
   ],
   socialLinks: [
     { ariaLabel: 'X', icon: 'tabler:brand-x', href: '#' },

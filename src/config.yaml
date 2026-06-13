@@ -1,5 +1,5 @@
 site:
-  name:  🌸Yume Yuri🌸  
+  name: 🌸Yume Yuri🌸
   site: 'https://astrowind.vercel.app'
   base: '/'
   trailingSlash: false
@@ -8,7 +8,7 @@ site:
 
 # Default SEO metadata
 metadata:
-  title: 
+  title:
     default: Yume Yuri
     template: '%s — AstroWind'
   description: "\U0001F680 Suitable for Startups, Small Business, Sass Websites, Professional Portfolios, Marketing Websites, Landing Pages & Blogs."

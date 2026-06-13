@@ -1,18 +1,15 @@
-# Yume Yuri 
-
-
+# Yume Yuri
 
 all right resever to original author
-base on https://github.com/arthelokyo/astrowind 
+base on https://github.com/arthelokyo/astrowind
 
+# Road map
 
+## 1.0
 
-# Road map 
+Site realse, adding :
 
-## 1.0 
-
-Site realse, adding : 
-- home page 
+- home page
 - presentation
 - yuri list
 - privacy page
@@ -28,8 +25,4 @@ Site realse, adding :
 
 ## 1.3
 
-- TODO 
-
-
-
-
+- TODO

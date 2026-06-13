@@ -6,7 +6,6 @@ import FAQs from '~/components/widgets/FAQs.astro';
 import Stats from '~/components/widgets/Stats.astro';
 import CallToAction from '~/components/widgets/CallToAction.astro';
 
-
 const metadata = {
   title: 'Bienvenus dans votre sanctuaire du yuri',
   ignoreTitleTemplate: true,
@@ -16,33 +15,25 @@ const metadata = {
 <Layout metadata={metadata}>
   <!-- Hero Widget ******************* -->
 
-  <Hero
-
-    ]}
-    image={{ src: '~/assets/images/test.png', alt: 'banner' }}
-  >
-    <Fragment slot="title">
-      Bienvenus dans votre sanctuaire du yuri
-    </Fragment>
+  <Hero image={{ src: '~/assets/images/test.png', alt: 'banner' }}>
+    <Fragment slot="title"> Bienvenus dans votre sanctuaire du yuri </Fragment>
 
     <Fragment slot="subtitle">
-      <span class="hidden sm:inline">
-        <span class="font-semibold">Yumi Yuri</span> votre sanctuaire du Yuri</span
-      >
+      <span class="hidden sm:inline"> <span class="font-semibold">Yumi Yuri</span> votre sanctuaire du Yuri</span>
       <span class="block mb-1 sm:hidden font-bold text-blue-600"> </span>
       Un monde magique et de rêve est à présent ici. Rien ne presse tout est là.
     </Fragment>
   </Hero>
 
   <!-- FAQs Widget ******************* -->
-    <Features2
-      title="A propos de nous"
-      subtitle="Passionnées par le yuri, nous avons créé ce sanctuaire pour partager notre amour et nos découvertes. Faciliter la découverte de nouveaux titres et de nouvelles histoires en français, ainsi que la promotion des œuvres de yuri. Créer un espace où les fans peuvent se rassembler, discuter et partager leur passion pour le yuri."
-    >
-      <Fragment slot="bg">
-        <div class="absolute inset-0 bg-page dark:bg-transparent"></div>
-      </Fragment>
-    </Features2>
+  <Features2
+    title="A propos de nous"
+    subtitle="Passionnées par le yuri, nous avons créé ce sanctuaire pour partager notre amour et nos découvertes. Faciliter la découverte de nouveaux titres et de nouvelles histoires en français, ainsi que la promotion des œuvres de yuri. Créer un espace où les fans peuvent se rassembler, discuter et partager leur passion pour le yuri."
+  >
+    <Fragment slot="bg">
+      <div class="absolute inset-0 bg-page dark:bg-transparent"></div>
+    </Fragment>
+  </Features2>
 
   <FAQs
     title="Questions pour ce sanctuaire ?"
@@ -62,13 +53,13 @@ const metadata = {
       {
         title: "Qu'elles sont les sous catégories du Yuri ?",
         description:
-          "Les sous-catégories du yuri regroupent différents types de relations entre filles selon le ton, le contexte ou le contenu : Shōjo-ai : romance douce(ex : Bloom Into You), Class S : amitiés amoureuses éphémères entre écolières (ex : Maria-sama ga Miteru), Moe/Slice of Life : relations mignonnes et légères (ex : Yuru Yuri), Dark Yuri : histoires sombres et obsessionnelles (ex : Happy Sugar Life), Subtext/Fanservice : sous-entendus sans romance canon (ex : Love Live!), Adult Yuri : femmes adultes dans un cadre réaliste (ex : Octave), Fantasy/SF Yuri : romance entre filles dans un univers fantastique ou futuriste (ex : Flip Flappers)"  ,
+          'Les sous-catégories du yuri regroupent différents types de relations entre filles selon le ton, le contexte ou le contenu : Shōjo-ai : romance douce(ex : Bloom Into You), Class S : amitiés amoureuses éphémères entre écolières (ex : Maria-sama ga Miteru), Moe/Slice of Life : relations mignonnes et légères (ex : Yuru Yuri), Dark Yuri : histoires sombres et obsessionnelles (ex : Happy Sugar Life), Subtext/Fanservice : sous-entendus sans romance canon (ex : Love Live!), Adult Yuri : femmes adultes dans un cadre réaliste (ex : Octave), Fantasy/SF Yuri : romance entre filles dans un univers fantastique ou futuriste (ex : Flip Flappers)',
       },
       {
-        title: "Qui sont les principaux éditeurs de Yuri en France ?",
+        title: 'Qui sont les principaux éditeurs de Yuri en France ?',
         description:
-          "Les principaux éditeurs de yuri en France sont Taifu Comics, pionnier avec des titres comme Citrus et Octave, spécialisé dans le yuri; Noeve Grafx, connu pour ses éditions premium et des séries comme Yuri is My Job! et Whisper Me a Love Song ; Meian, qui propose du yuri mêlé à la fantasy ou l’isekai, avec des titres comme I’m in Love with the Villainess ; Kana, éditeur généraliste qui a publié Bloom Into You, un yuri introspectif très apprécié",
-      }
+          'Les principaux éditeurs de yuri en France sont Taifu Comics, pionnier avec des titres comme Citrus et Octave, spécialisé dans le yuri; Noeve Grafx, connu pour ses éditions premium et des séries comme Yuri is My Job! et Whisper Me a Love Song ; Meian, qui propose du yuri mêlé à la fantasy ou l’isekai, avec des titres comme I’m in Love with the Villainess ; Kana, éditeur généraliste qui a publié Bloom Into You, un yuri introspectif très apprécié',
+      },
     ]}
   />
 
@@ -96,13 +87,10 @@ const metadata = {
       },
     ]}
   >
-    <Fragment slot="title">
-     Envie de discuté yuri ? 
-    </Fragment>
+    <Fragment slot="title"> Envie de discuté yuri ? </Fragment>
 
     <Fragment slot="subtitle">
       Pour en découvrir plus sur l'univers du yuri, n'hésitez pas à nous rejoindre sur notre serveur Discord.
     </Fragment>
   </CallToAction>
 </Layout>
-

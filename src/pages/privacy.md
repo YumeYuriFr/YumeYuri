@@ -19,15 +19,15 @@ We do **not** collect, store, transmit, or process any personal information.
 
 This includes, but is not limited to:
 
-* Names
-* Email addresses
-* Phone numbers
-* IP addresses
-* Device identifiers
-* Location data
-* Cookies
-* Analytics data
-* Usage statistics
+- Names
+- Email addresses
+- Phone numbers
+- IP addresses
+- Device identifiers
+- Location data
+- Cookies
+- Analytics data
+- Usage statistics
 
 ## Server-Side Storage
 
@@ -41,11 +41,11 @@ We do **not** store any information on your device.
 
 This website does not use:
 
-* Cookies
-* Local Storage
-* Session Storage
-* IndexedDB
-* Browser caches for user tracking purposes
+- Cookies
+- Local Storage
+- Session Storage
+- IndexedDB
+- Browser caches for user tracking purposes
 
 ## Third-Party Services
 
