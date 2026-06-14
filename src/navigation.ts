@@ -2,11 +2,11 @@ export const headerData = {
   links: [
     {
       text: 'Liste des Yuris',
-      href: './ListeYuri',
+      href: '/ListeYuri',
     },
     {
       text: 'Présentation',
-      href: './Presentation',
+      href: '/Presentation',
     },
   ],
   actions: [{ text: 'Discord', href: 'https://discord.gg/YyG3CmHTWh', target: '_blank' }],
