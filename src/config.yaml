@@ -11,7 +11,7 @@ metadata:
   title:
     default: Yume Yuri
     template: '%s — YumeYuri'
-  description: "Votre sanctuaire du yuri"
+  description: 'Votre sanctuaire du yuri'
   robots:
     index: true
     follow: true
