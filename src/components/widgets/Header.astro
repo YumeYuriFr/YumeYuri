@@ -4,6 +4,7 @@ import Logo from '~/components/Logo.astro';
 import ToggleTheme from '~/components/common/ToggleTheme.astro';
 import ToggleMenu from '~/components/common/ToggleMenu.astro';
 import Button from '~/components/ui/Button.astro';
+import { getPermalink } from '~/utils/permalinks';
 
 import { getHomePermalink } from '~/utils/permalinks';
 import { trimSlash, getAsset } from '~/utils/permalinks';
@@ -119,7 +120,7 @@ const currentPath = `/${trimSlash(new URL(Astro.url).pathname)}`;
                     'hover:text-link dark:hover:text-white px-4 py-3 flex items-center whitespace-nowrap',
                     { 'aw-link-active': href === currentPath },
                   ]}
-                  href={href}
+                  href={`${import.meta.env.BASE_URL}${href?.replace(/^\//, '')}`}
                 >
                   {text}
                 </a>
