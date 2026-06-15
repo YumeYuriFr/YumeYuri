@@ -229,11 +229,7 @@ const metadata = { title: `Liste Yuri — Page ${page.currentPage}` };
     ))
   }
 
-  <Pagination
-    currentPage={page.currentPage}
-    totalPages={page.lastPage}
-    basePath={getPermalink('ListeYuri')}
-  />
+  <Pagination currentPage={page.currentPage} totalPages={page.lastPage} basePath={getPermalink('ListeYuri')} />
 
   <CallToAction
     actions={[
