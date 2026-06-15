@@ -2,7 +2,7 @@ export const headerData = {
   links: [
     {
       text: 'Liste des Yuris',
-      href: 'ListeYuri',
+      href: '/ListeYuri/1',
     },
     {
       text: 'Présentation',
