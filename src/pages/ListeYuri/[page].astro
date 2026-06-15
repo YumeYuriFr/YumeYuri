@@ -181,6 +181,7 @@ const covers = {
 };
 
 import type { GetStaticPathsOptions, Page } from 'astro';
+import { getPermalink } from '~/utils/permalinks';
 
 export async function getStaticPaths({ paginate }: GetStaticPathsOptions) {
   return paginate(contentList, { pageSize: 15 });
@@ -231,7 +232,7 @@ const metadata = { title: `Liste Yuri — Page ${page.currentPage}` };
   <Pagination
     currentPage={page.currentPage}
     totalPages={page.lastPage}
-    basePath={`${import.meta.env.BASE_URL}ListeYuri`}
+    basePath={getPermalink('ListeYuri')}
   />
 
   <CallToAction

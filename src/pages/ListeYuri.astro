@@ -1,3 +1,4 @@
 ---
-return Astro.redirect(`${import.meta.env.BASE_URL}ListeYuri/1`);
+import { getPermalink } from '~/utils/permalinks';
+return Astro.redirect(getPermalink('ListeYuri/1'));
 ---
