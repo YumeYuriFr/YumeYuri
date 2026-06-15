@@ -23,7 +23,7 @@ const whenExternalScripts = (items: (() => AstroIntegration) | (() => AstroInteg
 
 export default defineConfig({
   site: 'https://YumeYuriFr.github.io/YumeYuri/',
-  
+
   output: 'static',
   base: isDev ? '/' : '/YumeYuri/',
   integrations: [
