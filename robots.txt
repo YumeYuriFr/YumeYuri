@@ -1,4 +1,4 @@
 User-agent: *
 Disallow:
 
-Sitemap: https://yumeyurifr.github.io/YumeYuri/sitemap-index.xml
+Sitemap: https://yumeyurifr.github.io/sitemap-index.xml
