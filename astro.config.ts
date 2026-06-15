@@ -16,7 +16,6 @@ import astrowind from './vendor/integration';
 import { readingTimeRemarkPlugin, responsiveTablesRehypePlugin, lazyImagesRehypePlugin } from './src/utils/frontmatter';
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
-const isDev = process.env.NODE_ENV === 'development';
 const hasExternalScripts = false;
 const whenExternalScripts = (items: (() => AstroIntegration) | (() => AstroIntegration)[] = []) =>
   hasExternalScripts ? (Array.isArray(items) ? items.map((item) => item()) : [items()]) : [];
@@ -25,7 +24,7 @@ export default defineConfig({
   site: 'https://YumeYuriFr.github.io/YumeYuri/',
 
   output: 'static',
-  base: isDev ? '/' : '/YumeYuri/',
+  base: '/YumeYuri/',
   integrations: [
     tailwind({
       applyBaseStyles: false,
