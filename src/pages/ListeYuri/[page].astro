@@ -182,6 +182,8 @@ const covers = {
 
 import type { GetStaticPathsOptions, Page } from 'astro';
 import { getPermalink } from '~/utils/permalinks';
+import SearchBar from '~/components/ui/SearchBar.astro';
+import type { SearchItem } from '~/components/ui/SearchBar.astro';
 
 export async function getStaticPaths({ paginate }: GetStaticPathsOptions) {
   return paginate(contentList, { pageSize: 15 });
@@ -194,42 +196,61 @@ interface Props {
 const { page } = Astro.props as Props;
 const entries = page.data;
 const metadata = { title: `Liste Yuri — Page ${page.currentPage}` };
+
+const searchItems: SearchItem[] = contentList.map((entry) => ({
+  title: entry.title,
+  author: entry.author,
+  publisher: entry.publisher,
+  status: entry.status,
+  volumesFR: entry.volumesFR,
+  volumesJP: entry.volumesJP,
+  synopsis: entry.synopsis,
+  shopLinks: entry.shopLinks,
+  imageSrc: (covers[entry.coverLink as keyof typeof covers] || placeholder).src,
+  imageAlt: entry.image?.alt || '',
+}));
 ---
 
 <Layout metadata={metadata}>
-  {
-    entries.map((entry, index) => (
-      <Content
-        image={{
-          src: covers[entry.coverLink as keyof typeof covers] || placeholder,
-          alt: entry.image?.alt || '',
-        }}
-        isReversed={index % 2 === 1}
-        isAfterContent={index % 3 === 0}
-      >
-        <div slot="content">
-          <h3 class="text-2xl font-bold tracking-tight dark:text-white sm:text-3xl mb-2">
-            {entry.title} - {entry.author}
-          </h3>
-          <p>Status : {entry.status}</p>
-          <p>
-            Tomes dispo FR : {entry.volumesFR} | JP : {entry.volumesJP}
-          </p>
-          <p>Éditeur : {entry.publisher}</p>
-          <p class="mt-2">{entry.synopsis}</p>
-          <div class="mt-3 space-x-3">
-            {Object.entries(entry.shopLinks).map(([shopName, url]) => (
-              <a href={url} target="_blank" rel="noopener noreferrer" class="text-pink-200 hover:underline">
-                {shopName}
-              </a>
-            ))}
-          </div>
-        </div>
-      </Content>
-    ))
-  }
+  <SearchBar items={searchItems} />
 
-  <Pagination currentPage={page.currentPage} totalPages={page.lastPage} basePath={getPermalink('ListeYuri')} />
+  <div id="static-list-content">
+    {
+      entries.map((entry, index) => (
+        <Content
+          image={{
+            src: covers[entry.coverLink as keyof typeof covers] || placeholder,
+            alt: entry.image?.alt || '',
+          }}
+          isReversed={index % 2 === 1}
+          isAfterContent={index % 3 === 0}
+        >
+          <div slot="content">
+            <h3 class="text-2xl font-bold tracking-tight dark:text-white sm:text-3xl mb-2">
+              {entry.title} - {entry.author}
+            </h3>
+            <p>Status : {entry.status}</p>
+            <p>
+              Tomes dispo FR : {entry.volumesFR} | JP : {entry.volumesJP}
+            </p>
+            <p>Éditeur : {entry.publisher}</p>
+            <p class="mt-2">{entry.synopsis}</p>
+            <div class="mt-3 space-x-3">
+              {Object.entries(entry.shopLinks).map(([shopName, url]) => (
+                <a href={url} target="_blank" rel="noopener noreferrer" class="text-pink-200 hover:underline">
+                  {shopName}
+                </a>
+              ))}
+            </div>
+          </div>
+        </Content>
+      ))
+    }
+  </div>
+
+  <div id="pagination-nav">
+    <Pagination currentPage={page.currentPage} totalPages={page.lastPage} basePath={getPermalink('ListeYuri')} />
+  </div>
 
   <CallToAction
     actions={[

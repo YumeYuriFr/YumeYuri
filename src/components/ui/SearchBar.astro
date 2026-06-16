@@ -1,0 +1,132 @@
+---
+export interface SearchItem {
+  title: string;
+  author: string;
+  publisher: string;
+  status: string;
+  volumesFR: number | string;
+  volumesJP: number | string;
+  synopsis: string;
+  shopLinks: Record<string, string>;
+  imageSrc: string;
+  imageAlt: string;
+}
+
+interface Props {
+  items: SearchItem[];
+}
+
+const { items } = Astro.props;
+---
+
+<div id="search-wrapper" class="mx-auto max-w-3xl px-4 pt-6 pb-2">
+  <div class="relative">
+    <svg
+      class="absolute left-3 top-1/2 -translate-y-1/2 w-4 h-4 text-muted"
+      xmlns="http://www.w3.org/2000/svg"
+      fill="none"
+      viewBox="0 0 24 24"
+      stroke="currentColor"
+    >
+      <path
+        stroke-linecap="round"
+        stroke-linejoin="round"
+        stroke-width="2"
+        d="M21 21l-4.35-4.35M17 11A6 6 0 1 1 5 11a6 6 0 0 1 12 0z"></path>
+    </svg>
+    <input
+      id="search-input"
+      type="search"
+      placeholder="Rechercher par titre, auteur ou éditeur..."
+      class="w-full rounded-lg border border-pink-300/40 bg-transparent py-2 pl-10 pr-4 text-sm text-default placeholder-muted focus:border-pink-400 focus:outline-none focus:ring-1 focus:ring-pink-400 dark:border-pink-300/30"
+      autocomplete="off"
+    />
+  </div>
+  <p id="search-count" class="mt-2 text-xs text-muted hidden"></p>
+</div>
+
+<div id="search-results" class="hidden"></div>
+
+<script define:vars={{ items }}>
+  const input = document.getElementById('search-input');
+  const resultsContainer = document.getElementById('search-results');
+  const countEl = document.getElementById('search-count');
+  const staticContent = document.getElementById('static-list-content');
+  const paginationEl = document.getElementById('pagination-nav');
+
+  function buildCard(item, index) {
+    const isReversed = index % 2 === 1;
+    const shopLinksHtml = Object.entries(item.shopLinks)
+      .map(
+        ([name, url]) =>
+          `<a href="${url}" target="_blank" rel="noopener noreferrer" class="text-pink-200 hover:underline">${name}</a>`
+      )
+      .join(' ');
+
+    const imageHtml = item.imageSrc
+      ? `<div class="relative m-auto max-w-xs mt-10 md:mt-0 md:basis-1/2">
+          <img src="${item.imageSrc}" alt="${item.imageAlt}" class="mx-auto w-full rounded-lg bg-transparent shadow-lg" loading="lazy" />
+        </div>`
+      : '';
+
+    const textHtml = `
+      <div class="md:basis-3/4 self-center">
+        <div class="mb-6 text-sm dark:text-slate-400">
+          <h3 class="text-2xl font-bold tracking-tight dark:text-white sm:text-3xl mb-2">${item.title} - ${item.author}</h3>
+          <p>Status : ${item.status}</p>
+          <p>Tomes dispo FR : ${item.volumesFR} | JP : ${item.volumesJP}</p>
+          <p>Éditeur : ${item.publisher}</p>
+          <p class="mt-2">${item.synopsis}</p>
+          <div class="mt-3 space-x-3">${shopLinksHtml}</div>
+        </div>
+      </div>`;
+
+    return `
+      <section class="relative not-prose scroll-mt-[72px]">
+        <div class="relative mx-auto max-w-3xl px-4 md:px-4 py-6 md:py-8 lg:py-10 text-default">
+          <div class="mx-auto max-w-3xl p-2 md:px-4">
+            <div class="md:flex md:gap-8 ${isReversed ? 'md:flex-row-reverse' : ''}">
+              ${textHtml}
+              ${imageHtml}
+            </div>
+          </div>
+        </div>
+      </section>`;
+  }
+
+  function search(query) {
+    const q = query.trim().toLowerCase();
+
+    if (!q) {
+      resultsContainer.classList.add('hidden');
+      resultsContainer.innerHTML = '';
+      countEl.classList.add('hidden');
+      if (staticContent) staticContent.classList.remove('hidden');
+      if (paginationEl) paginationEl.classList.remove('hidden');
+      return;
+    }
+
+    if (staticContent) staticContent.classList.add('hidden');
+    if (paginationEl) paginationEl.classList.add('hidden');
+
+    const filtered = items.filter(
+      (item) =>
+        item.title.toLowerCase().includes(q) ||
+        item.author.toLowerCase().includes(q) ||
+        item.publisher.toLowerCase().includes(q)
+    );
+
+    countEl.textContent = `${filtered.length} résultat${filtered.length !== 1 ? 's' : ''} trouvé${filtered.length !== 1 ? 's' : ''}`;
+    countEl.classList.remove('hidden');
+
+    if (filtered.length === 0) {
+      resultsContainer.innerHTML = '<p class="text-center text-muted py-16">Aucun résultat pour cette recherche.</p>';
+    } else {
+      resultsContainer.innerHTML = filtered.map((item, i) => buildCard(item, i)).join('');
+    }
+
+    resultsContainer.classList.remove('hidden');
+  }
+
+  input.addEventListener('input', (e) => search(e.target.value));
+</script>
