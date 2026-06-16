@@ -9,6 +9,7 @@ Based on [AstroWind](https://github.com/arthelokyo/astrowind). All rights reserv
 ## Roadmap
 
 ### v1.0 — Release
+
 - Home page
 - Presentation page
 - Yuri list (with pagination)
@@ -16,14 +17,17 @@ Based on [AstroWind](https://github.com/arthelokyo/astrowind). All rights reserv
 - 404 page
 
 ### v1.1 — List improvements
+
 - Yuri list layout update
 - Search bar
 - Filters (status, publisher, etc.)
 
 ### v1.2 — Anime page
+
 - New page dedicated to anime adaptations
 
 ### v1.3 — Recommendations
+
 - Recommendation section
 
 ### v1.4 — TBD
@@ -65,12 +69,12 @@ Output is generated in the `dist/` folder and automatically deployed to GitHub P
 
 ### Other commands
 
-| Command | Description |
-|---|---|
-| `npm run dev` | Start the local dev server |
-| `npm run build` | Build the site for production |
+| Command           | Description                          |
+| ----------------- | ------------------------------------ |
+| `npm run dev`     | Start the local dev server           |
+| `npm run build`   | Build the site for production        |
 | `npm run preview` | Preview the production build locally |
-| `npm run check` | Run Astro type checking |
+| `npm run check`   | Run Astro type checking              |
 
 ---
 
@@ -82,5 +86,6 @@ Before submitting code, make sure everything passes:
 
 ```bash
 npm run check
+npx prettier --write
 npm run build
 ```
