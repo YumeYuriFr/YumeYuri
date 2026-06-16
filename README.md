@@ -86,6 +86,6 @@ Before submitting code, make sure everything passes:
 
 ```bash
 npm run check
-npx prettier --write
+npx prettier --write .
 npm run build
 ```
