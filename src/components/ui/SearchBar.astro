@@ -7,7 +7,7 @@ export interface SearchItem {
   volumesFR: number | string;
   volumesJP: number | string;
   synopsis: string;
-  shopLinks: Record<string, string>;
+  shopLinks: Record<string, string | undefined>;
   imageSrc: string;
   imageAlt: string;
 }
@@ -57,6 +57,7 @@ const { items } = Astro.props;
   function buildCard(item, index) {
     const isReversed = index % 2 === 1;
     const shopLinksHtml = Object.entries(item.shopLinks)
+      .filter(([, url]) => url !== undefined)
       .map(
         ([name, url]) =>
           `<a href="${url}" target="_blank" rel="noopener noreferrer" class="text-pink-200 hover:underline">${name}</a>`
