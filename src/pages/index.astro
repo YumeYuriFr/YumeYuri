@@ -2,6 +2,7 @@
 import Layout from '~/layouts/PageLayout.astro';
 import Hero from '~/components/widgets/Hero.astro';
 import Features2 from '~/components/widgets/Features2.astro';
+import heroBg from '~/assets/images/test.png';
 import FAQs from '~/components/widgets/FAQs.astro';
 import Stats from '~/components/widgets/Stats.astro';
 import CallToAction from '~/components/widgets/CallToAction.astro';
@@ -15,7 +16,7 @@ const metadata = {
 <Layout metadata={metadata}>
   <!-- Hero Widget ******************* -->
 
-  <Hero image={{ src: '~/assets/images/test.png', alt: 'banner' }}>
+  <Hero id="hero-section">
     <Fragment slot="title"> Bienvenus dans votre sanctuaire du yuri </Fragment>
 
     <Fragment slot="subtitle">
@@ -23,12 +24,44 @@ const metadata = {
       <span class="block mb-1 sm:hidden font-bold text-blue-600"> </span>
       Un monde magique et de rêve est à présent ici. Rien ne presse tout est là.
     </Fragment>
+
+    <Fragment slot="bg">
+      <div
+        style={`background-image: url('${heroBg.src}'); background-attachment: fixed; background-size: cover; background-position: center;`}
+        class="absolute inset-0"
+      >
+      </div>
+      <div class="absolute inset-0 bg-black/40"></div>
+      <a
+        href="#after-hero"
+        class="absolute bottom-8 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2 text-white/80 hover:text-white transition-colors"
+      >
+        <span class="text-sm tracking-widest uppercase">Découvrir</span>
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          class="w-6 h-6 animate-bounce"
+          fill="none"
+          viewBox="0 0 24 24"
+          stroke="currentColor"
+        >
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+        </svg>
+      </a>
+    </Fragment>
   </Hero>
+
+  <div id="after-hero"></div>
+
+  <style>
+    #hero-section {
+      min-height: 100vh;
+    }
+  </style>
 
   <!-- FAQs Widget ******************* -->
   <Features2
     title="A propos de nous"
-    subtitle="Passionnées par le yuri, nous avons créé ce sanctuaire pour partager notre amour et nos découvertes. Faciliter la découverte de nouveaux titres et de nouvelles histoires en français, ainsi que la promotion des œuvres de yuri. Créer un espace où les fans peuvent se rassembler, discuter et partager leur passion pour le yuri."
+    subtitle="Passionnées par le yuri, nous avons créé ce sanctuaire pour partager notre amour et nos découvertes. Faciliter la découverte de nouveaux titres et de nouvelles histoires en français, ainsi que la promotion des œuvres de yuri. Créer un espace où les fans peuvent se rassembler, discuter et partager leur passion pour le yuri. En savoir plus ? <a href='/Presentation' class='text-pink-300 hover:underline'>Lire notre présentation →</a>"
   >
     <Fragment slot="bg">
       <div class="absolute inset-0 bg-page dark:bg-transparent"></div>

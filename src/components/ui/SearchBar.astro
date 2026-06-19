@@ -7,6 +7,7 @@ export interface SearchItem {
   volumesFR: number | string;
   volumesJP: number | string;
   synopsis: string;
+  subGenre: string;
   shopLinks: Record<string, string | undefined>;
   imageSrc: string;
   imageAlt: string;
@@ -37,7 +38,7 @@ const { items } = Astro.props;
     <input
       id="search-input"
       type="search"
-      placeholder="Rechercher par titre, auteur ou éditeur..."
+      placeholder="Rechercher par titre, auteur, éditeur ou sous-genre..."
       class="w-full rounded-lg border border-pink-300/40 bg-transparent py-2 pl-10 pr-4 text-sm text-default placeholder-muted focus:border-pink-400 focus:outline-none focus:ring-1 focus:ring-pink-400 dark:border-pink-300/30"
       autocomplete="off"
     />
@@ -74,9 +75,10 @@ const { items } = Astro.props;
       <div class="md:basis-3/4 self-center">
         <div class="mb-6 text-sm dark:text-slate-400">
           <h3 class="text-2xl font-bold tracking-tight dark:text-white sm:text-3xl mb-2">${item.title} - ${item.author}</h3>
-          <p>Status : ${item.status}</p>
-          <p>Tomes dispo FR : ${item.volumesFR} | JP : ${item.volumesJP}</p>
-          <p>Éditeur : ${item.publisher}</p>
+          <p>Status : <span class="text-pink-200">${item.status}</span></p>
+          <p>Tomes disponible FR : <span class="text-pink-200">${item.volumesFR}</span> | JP : <span class="text-pink-200">${item.volumesJP}</span></p>
+          <p>Éditeur : <span class="text-pink-200">${item.publisher}</span></p>
+          ${item.subGenre ? `<p>Sous-genre : <span class="text-pink-200">${item.subGenre}</span></p>` : ''}
           <p class="mt-2">${item.synopsis}</p>
           <div class="mt-3 space-x-3">${shopLinksHtml}</div>
         </div>
@@ -114,7 +116,8 @@ const { items } = Astro.props;
       (item) =>
         item.title.toLowerCase().includes(q) ||
         item.author.toLowerCase().includes(q) ||
-        item.publisher.toLowerCase().includes(q)
+        item.publisher.toLowerCase().includes(q) ||
+        item.subGenre.toLowerCase().includes(q)
     );
 
     countEl.textContent = `${filtered.length} résultat${filtered.length !== 1 ? 's' : ''} trouvé${filtered.length !== 1 ? 's' : ''}`;

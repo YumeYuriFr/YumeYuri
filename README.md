@@ -20,11 +20,11 @@ Based on [AstroWind](https://github.com/arthelokyo/astrowind). All rights reserv
 
 - Yuri list layout update
 - Search bar
-- Filters (status, publisher, etc.)
 
 ### v1.2 — Anime page
 
 - New page dedicated to anime adaptations
+- Filters (status, publisher, etc.)
 
 ### v1.3 — Recommendations
 
@@ -46,7 +46,7 @@ Based on [AstroWind](https://github.com/arthelokyo/astrowind). All rights reserv
 Clone the repository and install dependencies:
 
 ```bash
-git clone git@github.com:YumeYuriFR/YumeYuri.git
+git clone https://github.com/YumeYuriFr/YumeYuri
 cd YumeYuri
 npm install
 ```

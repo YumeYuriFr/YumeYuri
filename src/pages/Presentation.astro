@@ -24,67 +24,63 @@ const metadata = {
       Créer un espace où les fans peuvent se rassembler, discuter et partager leur passion pour le yuri.
     </Fragment>
   </Hero>
-  <Content
-    isReversed
-    title="Mikuwu"
-    items={[
-      {
-        title: '🌸ohayo 🌸',
-        description:
-          "Juste une meuf random qui joue à des jeux de rythme weeb et regarde des animes, fan de neko et yuri. Et une grosse simp de Bocchi The Rock. J'adore jouer à des jeux de rythme (genre vraiment beaucoup), genshin impact et minecraft. J'aime aussi énormément la musique(Metal, j-core, speedcore future funk). Ah et mon chat aussi il est beau.",
-      },
-      {
-        title: "Comment j'ai connu le yuri",
-        description:
-          "J'ai commencé les Yuris par citrus lorsqu'il est sortie en anime (donc en 2018), je suis tombée sous le charme du yuri de ce qu'il propose, représente. La manière de raconté la rommence entre filles, Les sentiments, les émotions etc.. Depuis je suis toujours à la recherche de nouveaux Yuris à découvrir, que ce soit en manga, anime ou jeux vidéo !",
-      },
-      {
-        title: 'Mon rôle dans Yume Yuri',
-        description:
-          "Nerd que je suis je m'occupe du développement du site et de tout ce qui touche à l'aspect technique du site. Qui fonctionne évidement Grace au Yuri !  ",
-      },
-    ]}
-    image={{
-      src: mikuwuImg,
-      alt: 'Colorful Image',
-    }}
-  >
+
+  <Content image={{ src: mikuwuImg, alt: 'Mikuwu' }} isReversed={false} isAfterContent={false}>
+    <div slot="content">
+      <h3 class="text-2xl font-bold tracking-tight dark:text-white sm:text-3xl mb-2">Mikuwu</h3>
+      <p>Rôle : <span class="text-pink-200">Développement & technique</span></p>
+      <p class="mt-2">
+        Juste une meuf random qui joue à des jeux de rythme weeb et regarde des animes, fan de neko et yuri. Et une
+        grosse simp de Bocchi The Rock. J'adore jouer à des jeux de rythme (genre vraiment beaucoup), genshin impact et
+        minecraft. J'aime aussi énormément la musique (Metal, j-core, speedcore future funk). Ah et mon chat aussi il
+        est beau.
+      </p>
+      <p class="mt-4 font-semibold dark:text-white">Comment j'ai connu le yuri</p>
+      <p>
+        J'ai commencé les Yuris par Citrus lorsqu'il est sorti en anime (donc en 2018), je suis tombée sous le charme du
+        yuri de ce qu'il propose, représente. La manière de raconter la romance entre filles, les sentiments, les
+        émotions etc.. Depuis je suis toujours à la recherche de nouveaux Yuris à découvrir, que ce soit en manga, anime
+        ou jeux vidéo !
+      </p>
+      <p class="mt-4 font-semibold dark:text-white">Mon rôle dans Yume Yuri</p>
+      <p>
+        Nerd que je suis je m'occupe du développement du site et de tout ce qui touche à l'aspect technique du site. Qui
+        fonctionne évidemment grâce au Yuri !
+      </p>
+    </div>
     <Fragment slot="bg">
       <div class="absolute inset-0 bg-[#1C1117] dark:bg-transparent"></div>
     </Fragment>
   </Content>
 
-  <!-- Content Widget **************** -->
-
-  <Content
-    isAfterContent
-    title="Sakura Adachi"
-    items={[
-      {
-        title: 'Bonjour',
-        description:
-          "Je suis sakura adachi, j'aime bien le power metal, les animes/mangas (weeb) plus précisément le genre yuri et comme mon pseudo l'indique: j'adore «Adachi to Shimamura» !!! Je joue au jeux vidéos depuis ma plus tendre enfance (très jeune), je joue régulièrement à différent type de jeu mais cela dépend beaucoup de la période. (Parmi mes favoris: Minecraft, osu!, Counter Strike, Code Vein)",
-      },
-      {
-        title: 'Comment ai-je connu le Yuri ? ',
-        description:
-          "Mon anecdote est nulle mais j'ai demandé à chatGPT de me donner un anime yuri a regarder et il m'a proposé «Citrus» et même si c'est chelou bah j'ai kiffer du coup j'ai enchainer avec d'autres comme: «Bloom Into You» ou «Netsuzou TRap NTR». Puis j'ai commencé à lire les mangas et un jour j'ai découvert le saint graal: «Adachi to Shimamura» (svp une saison 2) Effectivement j'ai découvert le genre assez récemment !",
-      },
-      {
-        title: 'Mon rôle dans Yume Yuri',
-        description:
-          "Contrairement à ma super collègue je n'ai pas de talent en développement web, en conséquence, c'est moi qui m'occupe de la recherches et du rassemblements des informations utilisées dans ce projet.",
-      },
-    ]}
-    image={{
-      src: adachiImg,
-      alt: 'Blueprint Image',
-    }}
-  >
+  <Content image={{ src: adachiImg, alt: 'Sakura Adachi' }} isReversed={true} isAfterContent={false}>
+    <div slot="content">
+      <h3 class="text-2xl font-bold tracking-tight dark:text-white sm:text-3xl mb-2">Sakura Adachi</h3>
+      <p>Rôle : <span class="text-pink-200">Recherche & contenu</span></p>
+      <p class="mt-2">
+        Je suis Sakura Adachi, j'aime bien le power metal, les animes/mangas (weeb) plus précisément le genre yuri et
+        comme mon pseudo l'indique : j'adore « Adachi to Shimamura » !!! Je joue aux jeux vidéos depuis ma plus tendre
+        enfance, je joue régulièrement à différents types de jeux mais cela dépend beaucoup de la période. (Parmi mes
+        favoris : Minecraft, osu!, Counter Strike, Code Vein)
+      </p>
+      <p class="mt-4 font-semibold dark:text-white">Comment ai-je connu le Yuri ?</p>
+      <p>
+        Mon anecdote est nulle mais j'ai demandé à ChatGPT de me donner un anime yuri à regarder et il m'a proposé «
+        Citrus » et même si c'est chelou bah j'ai kiffer du coup j'ai enchaîné avec d'autres comme : « Bloom Into You »
+        ou « Netsuzou TRap NTR ». Puis j'ai commencé à lire les mangas et un jour j'ai découvert le saint graal : «
+        Adachi to Shimamura » (svp une saison 2). Effectivement j'ai découvert le genre assez récemment !
+      </p>
+      <p class="mt-4 font-semibold dark:text-white">Mon rôle dans Yume Yuri</p>
+      <p>
+        Contrairement à ma super collègue je n'ai pas de talent en développement web, en conséquence, c'est moi qui
+        m'occupe de la recherche et du rassemblement des informations utilisées dans ce projet.
+      </p>
+    </div>
     <Fragment slot="bg">
       <div class="absolute inset-0 bg-[#1C1117] dark:bg-transparent"></div>
     </Fragment>
   </Content>
+
   <CallToAction
     actions={[
       {

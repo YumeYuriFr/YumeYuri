@@ -4,10 +4,6 @@ export const headerData = {
       text: 'Liste des Yuris',
       href: '/ListeYuri/1',
     },
-    {
-      text: 'Présentation',
-      href: 'Presentation',
-    },
   ],
   actions: [{ text: 'Discord', href: 'https://discord.gg/YyG3CmHTWh', target: '_blank' }],
 };
