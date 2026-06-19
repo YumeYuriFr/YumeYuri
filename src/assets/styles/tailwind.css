@@ -41,13 +41,13 @@
 /* Fix sticky header color to match #120B0F with transparency */
 /* Blur moins puissant */
 #header.scroll > div:first-child {
-  background: rgba(18, 11, 15, 0.95); /* #120B0F with 95% opacity */
-  backdrop-filter: blur(3px);
+  background: rgba(18, 11, 15, 0.5);
+  backdrop-filter: blur(6px);
   box-shadow: 0 0.375rem 1.5rem 0 rgb(140 152 164 / 13%);
 }
 .dark #header.scroll > div:first-child,
 #header.scroll.dark > div:first-child {
-  background: rgba(18, 11, 15, 0.95); /* #120B0F with 95% opacity */
+  background: rgba(18, 11, 15, 0.5);
   border-bottom: 1px solid rgba(255, 255, 255, 0.08);
   box-shadow: none;
 }
